@@ -1,0 +1,115 @@
+/* ////// Bubbles  */
+
+.bubbles {
+  height: 100vh;
+  background-color: #c59d5f;
+}
+.bubbles-wrapper {
+  height: 100vh;
+}
+h2 {
+  font-size: 30px;
+  color: crimson;
+}
+
+.bubbles-wrapper span {
+  position: fixed;
+  bottom: -50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  animation: animate 10s linear infinite;
+  transition: 4s ease;
+}
+.bubbles-wrapper:hover .bubble {
+  transform: scale(0.5);
+}
+.bubble:hover {
+  animation-play-state: paused;
+  background-color: tomato;
+}
+
+.bubbles-wrapper span:nth-child(1) {
+  left: 0;
+  animation-delay: 0.6s;
+  background-color: #fff;
+}
+.bubbles-wrapper span:nth-child(2) {
+  left: 10%;
+  animation-delay: 3s;
+  background-color: #fff;
+}
+.bubbles-wrapper span:nth-child(3) {
+  left: 20%;
+  animation-delay: 2s;
+  background-color: #fff;
+}
+.bubbles-wrapper span:nth-child(4) {
+  left: 30%;
+  animation-delay: 5s;
+  background-color: #fff;
+}
+/* .bubbles-wrapper span:nth-child(5) {
+  left: 40%;
+  animation-delay: 1s;
+  background-color: #fff;
+} */
+.bubbles-wrapper span:nth-child(6) {
+  left: 50%;
+  animation-delay: 7s;
+  background-color: #000;
+}
+.bubbles-wrapper span:nth-child(7) {
+  left: 60%;
+  animation-delay: 6s;
+  background-color: #000;
+}
+
+.bubbles-wrapper span:nth-child(8) {
+  left: 70%;
+  animation-delay: 8s;
+  background-color: #000;
+}
+.bubbles-wrapper span:nth-child(9) {
+  left: 80%;
+  animation-delay: 6s;
+  background-color: #000;
+}
+.bubbles-wrapper span:nth-child(10) {
+  left: 90%;
+  animation-delay: 4s;
+  background-color: #000;
+}
+
+@keyframes animate {
+  0% {
+    bottom: 0;
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  20% {
+    bottom: 20%;
+    margin-left: 0;
+    margin-right: 90px;
+  }
+  40% {
+    bottom: 40%;
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  60% {
+    bottom: 60%;
+    margin-left: 0;
+    margin-right: 90px;
+  }
+  80% {
+    bottom: 40%;
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  100% {
+    bottom: 100%;
+    margin-left: 0;
+    margin-right: 90px;
+  }
+}
