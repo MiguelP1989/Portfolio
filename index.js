@@ -10,7 +10,7 @@ window.onscroll = function() {
   let bottomOfWindow =
     document.documentElement.scrollTop + window.innerHeight ===
     document.documentElement.offsetHeight;
-  console.log(currentScrollpops);
+  // console.log(currentScrollpops);
   if (bottomOfWindow === true) {
     bubbles.classList.add("hidden");
   } else if (currentScrollpops === 0) {
@@ -27,23 +27,23 @@ window.onscroll = function() {
 
 //////////     hamburger menu /////////
 
-const selectElement = element => document.querySelector(element);
-
-selectElement(".hamburger").addEventListener("click", () => {
-  selectElement(".hamburger").classList.toggle("active");
-  selectElement(".nav-list").classList.toggle("active");
-});
-
-// var hamburger = document.querySelector(".hamburger");
-// var navList = document.querySelector(".nav-list");
-// console.log("navList", navList);
-// console.log("hamburguet", hamburger);
+// const selectElement = element => document.querySelector(element);
 //
-// hamburger.addEventListener("click", () => {
-//   console.log("cliking");
-//   hamburger.classList.toggle("active");
-//   navList.classList.toggle("active");
+// selectElement(".hamburger").addEventListener("click", () => {
+//   selectElement(".hamburger").classList.toggle("active");
+//   selectElement(".nav-list").classList.toggle("active");
 // });
+
+var hamburger = document.querySelector("#hamburger");
+var navList = document.querySelector("#nav-list");
+console.log("navList", navList);
+console.log("hamburguet", hamburger);
+
+hamburger.addEventListener("click", () => {
+  console.log("cliking");
+  hamburger.classList.toggle("active");
+  navList.classList.toggle("active");
+});
 
 //////////// paralax evect /////////
 
