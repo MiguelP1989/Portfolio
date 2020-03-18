@@ -5,17 +5,17 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   let currentScrollpops = window.pageYOffset;
   let nav = document.getElementById("nav-area");
-  let bubbles = document.querySelector(".bubbles-wrapper");
+  // let bubbles = document.querySelector(".bubbles-wrapper");
 
   let bottomOfWindow =
     document.documentElement.scrollTop + window.innerHeight ===
     document.documentElement.offsetHeight;
   // console.log(currentScrollpops);
-  if (bottomOfWindow === true) {
-    bubbles.classList.add("hidden");
-  } else if (currentScrollpops === 0) {
-    bubbles.classList.remove("hidden");
-  }
+  // if (bottomOfWindow === true) {
+  //   bubbles.classList.add("hidden");
+  // } else if (currentScrollpops === 0) {
+  //   bubbles.classList.remove("hidden");
+  // }
 
   if (prevScrollpos > currentScrollpops) {
     nav.classList.remove("animate");
@@ -36,11 +36,15 @@ window.onscroll = function() {
 
 var hamburger = document.querySelector("#hamburger");
 var navList = document.querySelector("#nav-list");
-console.log("navList", navList);
-console.log("hamburguet", hamburger);
+
+navList.addEventListener("click", () => {
+  navList.classList.add("hidden");
+  navList.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
 
 hamburger.addEventListener("click", () => {
-  console.log("cliking");
+  navList.classList.remove("hidden");
   hamburger.classList.toggle("active");
   navList.classList.toggle("active");
 });
@@ -54,14 +58,12 @@ window.addEventListener("scroll", function() {
   parallax.style.transform = "translateY(" + scrollPosition * 0.4 + "px)";
 });
 
-// ///////// buubles////
-
 // revel images effect //
 
 const images = document.querySelectorAll(".image");
-const paragraphs = document.querySelectorAll(".description");
+// const paragraphs = document.querySelectorAll(".description");
 
-console.log(paragraphs);
+// console.log(paragraphs);
 
 const revealImages = scrollTop => {
   images.forEach(image => {
@@ -69,11 +71,11 @@ const revealImages = scrollTop => {
       image.classList.add("reveal");
     }
   });
-  paragraphs.forEach(para => {
-    if (scrollTop + window.innerHeight > para.offsetTop + para.offsetHeight) {
-      para.classList.add("reveal");
-    }
-  });
+  // paragraphs.forEach(para => {
+  //   if (scrollTop + window.innerHeight > para.offsetTop + para.offsetHeight) {
+  //     para.classList.add("reveal");
+  //   }
+  // });
 };
 
 revealImages(0);
@@ -82,6 +84,49 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   revealImages(scrollTop);
 });
+
+// //////////  skkills slide/////
+
+const slideIn = document.querySelectorAll(".slide-in");
+// const slideRight = document.querySelectorAll(".from-right");
+console.log(slideIn);
+function debounce(func, wait = 20, imediate = true) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!imediate) func.apply(context, args);
+    };
+    var callNow = imediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+checkslide = e => {
+  // console.count(e);
+  slideIn.forEach(slideImage => {
+    // haldway throuh the image
+    const slideInAt = window.scrollY + window.innerHeight;
+    slideImage.height / 2;
+    // buttom of the image
+    const imageBottom = slideImage.offsetTop + slideImage.height;
+    // console.log("imageBottom", imageBottom);
+    const isHalfShown = slideInAt > slideImage.offsetTop;
+    // console.log("ishalsHown", isHalfShown);
+    const isNotScrolledPast = window.scrollY < imageBottom;
+    if (isHalfShown || isNotScrolledPast) {
+      console.log(slideImage);
+      slideImage.classList.add("show");
+    } else {
+      slideImage.classList.remove("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", debounce(checkslide));
 
 // ///// eyes ///
 

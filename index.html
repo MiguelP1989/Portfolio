@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bubbles.css" />
     <link rel="stylesheet" href="svg.css" />
@@ -14,11 +15,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Rubik&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="nav-area">
       <div class="menu-wrapper">
-        <h1 class="logo"><a class="nav-link" href="#">Creativo</a></h1>
+        <div id="loader">
+          <a class="nav-link" href="#">MP</a>
+        </div>
 
         <nav>
           <ul id="nav-list">
@@ -239,6 +246,7 @@
         <div class="about-heading">
           <h1>About</h1>
           <hr />
+
           <p class="aboutParagraph">
             Hello! I'm a Junior Web Developer based in Berlin with a background
             in Ecology. Before discovering my passion for programming I worked
@@ -259,10 +267,21 @@
         <div class="project-inner-container">
           <div class="image petition">
             <img class="petitionImage" src="./images/petition.png" alt="" />
+            <div class="projectLinks">
+              <a
+                class="btn-demo"
+                href=" https://yogasessions.herokuapp.com/"
+                target="_blank"
+                >View Demo</a
+              >
 
-            <button onclick="document.location = 'default.asp'">
-              View site
-            </button>
+              <a
+                href="https://github.com/MiguelP1989/petition"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
 
           <div class="description">
@@ -276,7 +295,9 @@
                 was understanding the data flow.
               </p>
               <p>
-                Stack: Handlebars, Node.js/Express & PostgreSQL
+                <b>
+                  Stack: Handlebars | Node.js/Express | PostgreSQL
+                </b>
               </p>
             </div>
           </div>
@@ -290,37 +311,72 @@
                 image, add a title, description and select a tag, comment
                 images, and search images by tags.
               </p>
-              <p class="stackimageboard">
-                Stack: Vue.js, AWS S3, Node.js/Express & PostgreSQL
+              <p>
+                <b>
+                  Stack: Vue.js | AWS S3 | Node.js/Express | PostgreSQL
+                </b>
               </p>
             </div>
           </div>
 
           <div class="image">
             <img class="imageImageboard" src="./images/imageboard.png" alt="" />
+            <div class="projectLinks">
+              <a
+                class="btn-demo"
+                href=" https://yogasessions.herokuapp.com/"
+                target="_blank"
+                >View Demo</a
+              >
+
+              <a
+                href="https://github.com/MiguelP1989/imageboard"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
           </div>
         </div>
         <div class="project-inner-container">
-          <div class="image socialnetwork">
+          <div class="image">
             <img
               class="imageSocialnetwork"
               src="./images/socialnetwork.png"
               alt=""
             />
+            <div class="projectLinks">
+              <a
+                class="btn-demo"
+                href=" https://yogasessions.herokuapp.com/"
+                target="_blank"
+                >View Demo</a
+              >
+
+              <a
+                href="https://github.com/MiguelP1989/Social-Network"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
             <div class="box1"></div>
           </div>
           <div class="description">
             <div class="descriptionSocial">
               <h1 class="title">Social Network</h1>
               <p>
-                Text ( Latin texere 'weave', 'weave') in non-scientific language
-                use denotes a delimited, coherent, mostly written linguistic
-                utterance, in the broader sense also non-written but writable
-                language information (for example, of a song , film or
-                improvised theater performance). From a linguistic perspective,
-                a text is the linguistic form of a communicative action .
+                React-based authenticated social network with chat
+                functionality. Features include a personal profile, image
+                upload, list of online friends, sending, receiving, and
+                accepting friend requests.
               </p>
-              <p></p>
+              <p>
+                <b
+                  >Stack: AWS S3 | Node | PostgreSQL | Socket.IO &nbsp; |&nbsp;
+                  &nbsp;React &nbsp;|&nbsp; Redux
+                </b>
+              </p>
             </div>
           </div>
         </div>
@@ -328,12 +384,50 @@
     </section>
 
     <section class="paralax3"></section>
+    <div class="arrow">
+      <div class="arrow-down"></div>
+    </div>
 
-    <!-- <section class="bubbles">
-      <div class="bubbles-wrapper">
-        <span class="bubble ">GIVE ME AN AOPPORTUNITY</span>
+    <section class="skills">
+      <div class="skills-inner-container">
+        <div class="SkillsHeader">
+          <h1>Skills</h1>
+
+          <hr class="skillLine" />
+        </div>
+        <div class="skillContainer">
+          <div class="align-left slide-in">
+            <p><b>Programing</b></p>
+            <p><b>Frameworks/Tolls/Libs</b></p>
+            <p><b>Database</b></p>
+            <p><b>Testing</b></p>
+            <p><b>Development</b></p>
+            <p><b>Cloud Tech</b></p>
+            <p><b>Soft Skill</b></p>
+            <p><b>Languages</b></p>
+          </div>
+
+          <div>
+            <div class="vl"></div>
+          </div>
+          <div class="align-right slide-in">
+            <p>JavaScript/ES6 | Node.js | HTML | CSS</p>
+            <p>
+              Express | React | Redux | Vue.js | jQuery | Handlebars
+            </p>
+            <p>PostgreSQL</p>
+            <p>Jest</p>
+            <p>Git | Github</p>
+            <p>Heroku | AWS</p>
+            <p>
+              Communication | teamwork | flexibility | adaptability
+            </p>
+            <p>Portuguese(native) | English(fluent)</p>
+          </div>
+        </div>
       </div>
-    </section> -->
+    </section>
+
     <section id="contact">
       <div class="banner-area">
         <!-- <div class="face">
@@ -347,8 +441,8 @@
         <ul class="icon-list">
           <li class="icon-item">
             <a href="./images/CV-Miguel.pdf" target="_blank" class="icon-link"
-              ><i class="fab fa-file-alt"></i
-            ></a>
+              ><i class="fas fa-file-pdf"></i>
+            </a>
           </li>
           <li class="icon-item">
             <a
@@ -368,16 +462,74 @@
             ></a>
           </li>
           <li class="icon-item">
-            <a href="#" class="icon-link"><i class="fab fa-envelope"></i></a>
+            <a href="mailto:jose.m.patrocinio@hotmail.com" class="icon-link"
+              ><i class="fas fa-envelope-square"></i
+            ></a>
           </li>
         </ul>
       </div>
     </section>
-    <!-- <div class="main-text">
-      <h2>Content Heading</h2>
-      <p>SJBDLWKFHUILHEIUFUEHRF;REUFR</p>
+    <!-- <div class="slideshow-block">
+      <a href="#" class="link"></a>
+      <ul class="slides">
+        <li class="slides"><img src="./images/1.jpg" /></li>
+        <li class="slides"><img src="./images/2.jpg" /></li>
+        <li class="slides"><img src="./images/3.jpg" /></li>
+      </ul>
     </div> -->
-
+    <!-- <section class="team">
+      <div class="grid-xlarge">
+        <div class="team__container">
+          <article>
+            <a class="team__link"
+              >hello woooooooorld
+              <div class="team__img-container">
+                <span class="preloader"></span>
+                <figure class="team__img">
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/OKrac02GXgQ/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Z8XMAHDpjyU/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/_FoHMYYlatI/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Shuj-9LqHwk/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/sseiVD2XsOk/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/2Ts5HnA67k8/1600x1600"
+                    alt=""
+                  />
+                  <img
+                    class="absolute-bg"
+                    src="https://source.unsplash.com/Ku-pKAfBPFU/1600x1600"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <script type="text/javascript" src="svg.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </body>
