@@ -1,4 +1,10 @@
-// on scroll
+///reload
+
+let reloaded = document.querySelector(".reload");
+
+reloaded.addEventListener("click", () => {
+  window.location.reload();
+});
 
 var prevScrollpos = window.pageYOffset;
 
@@ -118,7 +124,7 @@ checkslide = e => {
     // console.log("ishalsHown", isHalfShown);
     const isNotScrolledPast = window.scrollY < imageBottom;
     if (isHalfShown || isNotScrolledPast) {
-      console.log(slideImage);
+      // console.log(slideImage);
       slideImage.classList.add("show");
     } else {
       slideImage.classList.remove("show");
@@ -127,21 +133,5 @@ checkslide = e => {
 };
 
 window.addEventListener("scroll", debounce(checkslide));
-
-// ///// eyes ///
-
-// let eye = document.querySelectorAll(".ball");
-// console.log(eye);
-//
-// document.onmousemove = () => {
-//   var x = (event.clientX * 100) / window.innerWidth + "px";
-//   var y = (event.clientY * 100) / window.innerHeight + "px";
-//
-//   for (var i = 0; i < 2; i++) {
-//     eye[i].style.left = x;
-//     eye[i].style.top = y;
-//     // eye[i].style.transform = "translate(-" + x + ",-" + y + ")";
-//   }
-// };
 
 // ///////////

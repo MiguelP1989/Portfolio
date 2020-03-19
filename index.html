@@ -2,6 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -23,8 +28,8 @@
   <body>
     <header id="nav-area">
       <div class="menu-wrapper">
-        <div id="loader">
-          <a class="nav-link" href="#">MP</a>
+        <div id="loader" class="reload">
+          <a class="nav-link " href="#">MP</a>
         </div>
 
         <nav>
@@ -241,18 +246,21 @@
         <p class="sub-headline">Web Developer</p>
       </div>
     </section>
-    <section class="about" id="about">
+    <section id="about">
       <div class="about-container paralax2">
-        <div class="about-heading">
-          <h1>About</h1>
-          <hr />
+        <div id="about-heading">
+          <div class="">
+            <h1>About</h1>
+            <hr />
 
-          <p class="aboutParagraph">
-            Hello! I'm a Junior Web Developer based in Berlin with a background
-            in Ecology. Before discovering my passion for programming I worked
-            in catering sector. <br />I am good at synthesizing and applying new
-            information quickly as well as adapting to changing environments.
-          </p>
+            <p class="aboutParagraph">
+              Hello! I'm a Junior Web Developer based in Berlin with a
+              background in Ecology. Before discovering my passion for
+              programming I worked in catering sector. <br />I am good at
+              synthesizing and applying new information quickly as well as
+              adapting to changing environments.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -265,25 +273,6 @@
 
       <div class="project-container ">
         <div class="project-inner-container">
-          <div class="image petition">
-            <img class="petitionImage" src="./images/petition.png" alt="" />
-            <div class="projectLinks">
-              <a
-                class="btn-demo"
-                href=" https://yogasessions.herokuapp.com/"
-                target="_blank"
-                >View Demo</a
-              >
-
-              <a
-                href="https://github.com/MiguelP1989/petition"
-                target="_blank"
-                class="icon-link"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-
           <div class="description">
             <div class="descriptionPetition">
               <h1 class="title">Petition</h1>
@@ -299,6 +288,24 @@
                   Stack: Handlebars | Node.js/Express | PostgreSQL
                 </b>
               </p>
+            </div>
+          </div>
+          <div class="image petition">
+            <img class="petitionImage" src="./images/petition.png" alt="" />
+            <div class="projectLinks">
+              <a
+                class="btn-demo"
+                href=" https://yogasessions.herokuapp.com/"
+                target="_blank"
+                >View Online</a
+              >
+
+              <a
+                href="https://github.com/MiguelP1989/petition"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -326,7 +333,7 @@
                 class="btn-demo"
                 href=" https://yogasessions.herokuapp.com/"
                 target="_blank"
-                >View Demo</a
+                >View Online</a
               >
 
               <a
@@ -339,29 +346,6 @@
           </div>
         </div>
         <div class="project-inner-container">
-          <div class="image">
-            <img
-              class="imageSocialnetwork"
-              src="./images/socialnetwork.png"
-              alt=""
-            />
-            <div class="projectLinks">
-              <a
-                class="btn-demo"
-                href=" https://yogasessions.herokuapp.com/"
-                target="_blank"
-                >View Demo</a
-              >
-
-              <a
-                href="https://github.com/MiguelP1989/Social-Network"
-                target="_blank"
-                class="icon-link"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-            <div class="box1"></div>
-          </div>
           <div class="description">
             <div class="descriptionSocial">
               <h1 class="title">Social Network</h1>
@@ -378,6 +362,29 @@
                 </b>
               </p>
             </div>
+          </div>
+          <div class="image">
+            <img
+              class="imageSocialnetwork"
+              src="./images/socialnetwork.png"
+              alt=""
+            />
+            <div class="projectLinks">
+              <a
+                class="btn-demo"
+                href=" https://yogasessions.herokuapp.com/"
+                target="_blank"
+                >View Online</a
+              >
+
+              <a
+                href="https://github.com/MiguelP1989/Social-Network"
+                target="_blank"
+                class="icon-link"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+            <!-- <div class="box1"></div> -->
           </div>
         </div>
       </div>
@@ -397,14 +404,14 @@
         </div>
         <div class="skillContainer">
           <div class="align-left slide-in">
-            <p><b>Programing</b></p>
-            <p><b>Frameworks/Tolls/Libs</b></p>
-            <p><b>Database</b></p>
-            <p><b>Testing</b></p>
-            <p><b>Development</b></p>
-            <p><b>Cloud Tech</b></p>
-            <p><b>Soft Skill</b></p>
-            <p><b>Languages</b></p>
+            <p class="p"><b>Programing</b></p>
+            <p class="p"><b>Frameworks/Tolls/Libs</b></p>
+            <p class="p"><b>Database</b></p>
+            <p class="p"><b>Testing</b></p>
+            <p class="p"><b>Development</b></p>
+            <p class="p"><b>Cloud Tech</b></p>
+            <p class="p"><b>Soft Skill</b></p>
+            <p class="p"><b>Languages</b></p>
           </div>
 
           <div>
@@ -430,14 +437,6 @@
 
     <section id="contact">
       <div class="banner-area">
-        <!-- <div class="face">
-        <div class="eye">
-          <div class="ball"></div>
-        </div>
-        <div class="eye">
-          <div class="ball"></div>
-        </div>
-      </div> -->
         <ul class="icon-list">
           <li class="icon-item">
             <a href="./images/CV-Miguel.pdf" target="_blank" class="icon-link"
@@ -469,66 +468,7 @@
         </ul>
       </div>
     </section>
-    <!-- <div class="slideshow-block">
-      <a href="#" class="link"></a>
-      <ul class="slides">
-        <li class="slides"><img src="./images/1.jpg" /></li>
-        <li class="slides"><img src="./images/2.jpg" /></li>
-        <li class="slides"><img src="./images/3.jpg" /></li>
-      </ul>
-    </div> -->
-    <!-- <section class="team">
-      <div class="grid-xlarge">
-        <div class="team__container">
-          <article>
-            <a class="team__link"
-              >hello woooooooorld
-              <div class="team__img-container">
-                <span class="preloader"></span>
-                <figure class="team__img">
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/OKrac02GXgQ/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/Z8XMAHDpjyU/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/_FoHMYYlatI/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/Shuj-9LqHwk/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/sseiVD2XsOk/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/2Ts5HnA67k8/1600x1600"
-                    alt=""
-                  />
-                  <img
-                    class="absolute-bg"
-                    src="https://source.unsplash.com/Ku-pKAfBPFU/1600x1600"
-                    alt=""
-                  />
-                </figure>
-              </div>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section> -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <!-- <script script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <script type="text/javascript" src="svg.js"></script>
     <script type="text/javascript" src="index.js"></script>

@@ -186,11 +186,10 @@ nav {
 }
 /* ///////////////////// */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 350px) and (max-width: 768px) {
   #nav-list {
     width: 100%;
     height: 100vh;
-
     /* margin-top: 40px; */
     flex-direction: column;
     align-items: center;
@@ -199,6 +198,7 @@ nav {
     /* top: 0; */
     left: 0;
     background-color: rgba(204, 131, 92, 0.95);
+
     bottom: -100vh;
     transition: bottom 650ms;
   }
@@ -211,8 +211,58 @@ nav {
   .nav-item {
     margin-top: 30px;
   }
-}
 
+  #headline {
+    width: 300px;
+    /* height: 300px; */
+  }
+
+  .descriptionPetition,
+  .descriptionImageboard,
+  .descriptionSocial {
+    width: 320px;
+  }
+
+  #about-heading {
+    height: 400px;
+    width: 350px !important;
+    margin-left: 0 !important;
+    position: relative;
+    bottom: 50px;
+    right: 65px;
+    /* margin: 0 auto; */
+    /* overflow-x: hidden; */
+    /* max-width: 100% !important; */
+    /* width: 300px; */
+    /* margin-right: 800px; */
+  }
+  .aboutParagraph {
+    /* border: 2px solid green; */
+    width: 350px;
+    /* margin-left: 50px; */
+    /* height: 400px; */
+    /* max-width: 100% !important; */
+    /* overflow-x: hidden; */
+  }
+
+  .petitionImage,
+  .imageImageboard,
+  .imageSocialnetwork {
+    max-height: 300px !important;
+    max-width: 300px !important;
+    object-position: center;
+  }
+  .banner-area {
+    height: 60vh !important;
+  }
+
+  .icon-list {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  }
+}
 /* //////// PARALAX     */
 
 .hero {
@@ -267,26 +317,24 @@ nav {
   height: 50%;
 } */
 
-.hidden {
-  display: none;
-}
-
 /* ///////ABOUT SECTION */
 
-.about {
+#about {
   /* border: 2px solid blue; */
-  width: 100%;
+  /* width: 100%; */
   /* margin-top: 40%; */
   text-align: center;
   justify-content: center;
   display: flex;
   /* flex-wrap: wrap; */
+  /* border: 2px solid red; */
 }
-.about-heading {
+#about-heading {
   display: flex;
   /* flex-wrap: wrap; */
   width: 60%;
-  height: 350px;
+  /* height: 420px; */
+  /* height: 350px; */
   flex-direction: column;
   padding: 25px;
   /* justify-content: center; */
@@ -295,10 +343,11 @@ nav {
   background-color: white;
 
   /* border: 2px solid black; */
+  /* overflow-x: hidden; */
 }
 
 .aboutParagraph {
-  width: 450px;
+  max-width: 450px;
   text-align: justify;
   padding: 40px;
 
@@ -370,6 +419,7 @@ nav {
   /* border: 2px solid green; */
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
   padding: 40px;
@@ -380,6 +430,7 @@ nav {
 
 .project-inner-container2 {
   display: flex;
+
   flex-wrap: wrap;
 
   justify-content: space-around;
@@ -387,6 +438,10 @@ nav {
   padding: 40px;
   /* background-color: rgba(204, 131, 92, 0.95); */
   background-color: rgb(238, 226, 215);
+  /* background: linear-gradient(0.25turn, #ffffff, #e5dfdf); */
+  /* background: linear-gradient(to left, #333, #333 50%, #eee 75%); */
+
+  /* #706c61 */
 }
 
 p {
@@ -437,6 +492,10 @@ a {
 
 .image {
   opacity: 0;
+  object-position: center;
+  /* object-fit: scale-down; */
+  /* transform: translateY(50%); */
+
   transform: scale(1.1);
   display: flex;
   align-items: center;
@@ -452,7 +511,8 @@ a {
 /* /////////////  //////////// */
 
 .petitionImage,
-.petition {
+.imageImageboard,
+.imageSocialnetwork {
   height: 400px;
   width: 600px;
   /* position: absolute; */
@@ -465,17 +525,15 @@ a {
   /* object-fit: cover; */
 }
 
-.imageImageboard {
+/* .imageImageboard {
   height: 400px;
   width: 600px;
   object-fit: cover;
-}
+} */
 
-.imageSocialnetwork,
-.socialnetwork {
+.imageSocialnetwork {
   /* height: 550px; */
-  height: 400px;
-  width: 600px;
+
   /* width: 500px; */
   object-fit: cover;
   /* background-color: white; */
@@ -492,6 +550,7 @@ a {
 @keyframes scale-down {
   to {
     /* background-size: 100%; */
+    /* transform: translateY(0%); */
     transform: scale(1);
     opacity: 1;
   }
@@ -602,6 +661,8 @@ a {
 
 .skillContainer {
   display: flex;
+  /* flex-direction: column; */
+
   /* justify-content: center; */
   width: 100%;
   /* border: 2px solid red; */
@@ -630,6 +691,10 @@ a {
 .slide-in.show {
   transform: translateX(0%);
   opacity: 1;
+}
+
+.p {
+  font-weight: bold;
 }
 
 /* ////////////////////// CONTACT SECTION//////////////////// */
