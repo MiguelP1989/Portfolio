@@ -1,10 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  /* color: rgba(204, 131, 92, 0.95); */
+  /* color: rgba(204, 131, 92, 0.55); */
   max-width: 100%;
   overflow-x: hidden;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   line-height: 25px;
 }
@@ -214,7 +214,7 @@ nav {
 }
 
 .parallax {
-  background-color: rgba(204, 131, 92, 0.95);
+  background-color: rgba(204, 131, 92, 0.55);
   position: absolute;
   top: 0;
   left: 0;
@@ -409,16 +409,17 @@ a {
 /* /////////   SKKKIILLLLSSSSSSS  section */
 
 .skills {
-  height: 700px;
-  width: 100%;
+  /* height: 700px; */
+  /* width: 100%; */
   text-align: center;
+  /* display: flex; */
 }
 
 .skills-inner-container {
-  display: flex;
-  height: 700px;
-  justify-content: center;
-  flex-direction: column;
+  /* display: flex;
+  height: 700px; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
 }
 
 .vl {
@@ -480,8 +481,9 @@ a {
 
 .banner-area {
   width: 100%;
-  height: 40vh;
-  background-color: #f1f3f4;
+  height: 50vh;
+  /* background-color: #f1f3f4; */
+  background-color: #d4d7dd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,6 +498,9 @@ a {
 
 .icon-item {
   list-style: none;
+}
+#color {
+  color: white;
 }
 .icon-link {
   cursor: pointer;
@@ -529,7 +534,7 @@ a {
   height: 0;
   border-left: 720px solid transparent;
   border-right: 720px solid transparent;
-  border-top: 90px solid #f1f3f4;
+  border-top: 90px solid #f6f5f5;
 }
 
 @media screen and (min-width: 350px) and (max-width: 768px) {
@@ -541,7 +546,7 @@ a {
     justify-content: center;
     position: fixed;
     left: 0;
-    background-color: rgba(204, 131, 92, 0.95);
+    background-color: rgba(204, 131, 92, 0.8);
     bottom: -100vh;
     transition: bottom 650ms;
   }
@@ -602,7 +607,7 @@ a {
     margin-right: 30px;
   }
   .vl {
-    height: 280px;
+    height: 380px;
   }
   .pF {
     padding-top: 30px;
@@ -621,9 +626,23 @@ a {
     align-items: center;
     flex-direction: column;
   }
+
+  .card {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .cards-container {
+    grid-template-columns: 150px 150px !important;
+    margin-top: 150px !important;
+    margin-left: 70px !important;
+  }
+  .front,
+  .back {
+    font-size: 12px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .pF {
     padding-top: 10px;
   }
@@ -640,4 +659,97 @@ a {
   .pL {
     padding-top: 0;
   }
+} */
+
+/* ///////     */
+
+.cards-container {
+  /* display: grid; */
+  display: grid;
+
+  margin-left: 120px;
+  margin-top: 250px;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  /* grid-template-columns: 250px 250px 250px 250px; */
+  grid-template-columns: 250px 250px 250px auto;
+  /* grid-template-rows: 250px auto; */
+  justify-items: center;
+
+  /* border: 2px solid red; */
+  grid-gap: 5px;
+
+  /* justify-items: stretch; */
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+
+  /* height: 100%; */
+}
+
+.middle {
+  width: 100%;
+
+  /* border: 2px solid green; */
+  /* position: relative; */
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+}
+
+.front,
+.back {
+  /* border: 5px solid black; */
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.6s linear;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+  background-color: rgba(204, 131, 92, 0.55);
+}
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #f6f5f5;
+}
+
+.card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  width: 100%;
+}
+
+.cards-container.slide-in {
+  transform: translateX(-50%);
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.slide-in.show {
+  transform: translateX(0%);
+  opacity: 1;
 }
